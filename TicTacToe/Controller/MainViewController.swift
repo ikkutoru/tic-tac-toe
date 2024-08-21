@@ -8,22 +8,31 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
+    //MARK: IBOUTLETS
+    @IBOutlet var mainView: MainView!
+    
+    //MARK: VARS
+    var gameStarted: Bool?
+    
+    //MARK: LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: IBACTIONS
+    
+    //MARK: FUNCTIONS
+    func updateUI() {
+        
     }
-    */
+    
+    func startGame() {
+        
+    }
+    
+    func whoWon() {
+        
+    }
 
 }
