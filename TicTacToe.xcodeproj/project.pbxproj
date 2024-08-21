@@ -56,6 +56,9 @@
 		C740A2E22C75D3750008C52D /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				C740A2F92C75D4970008C52D /* Controller */,
+				C740A2F82C75D4910008C52D /* Model */,
+				C740A2F72C75D48C0008C52D /* View */,
 				C740A2E32C75D3750008C52D /* AppDelegate.swift */,
 				C740A2E52C75D3750008C52D /* SceneDelegate.swift */,
 				C740A2E72C75D3750008C52D /* ViewController.swift */,
@@ -65,6 +68,27 @@
 				C740A2F12C75D3770008C52D /* Info.plist */,
 			);
 			path = TicTacToe;
+			sourceTree = "<group>";
+		};
+		C740A2F72C75D48C0008C52D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C740A2F82C75D4910008C52D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C740A2F92C75D4970008C52D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
