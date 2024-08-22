@@ -67,7 +67,6 @@ class MainView: UIView {
         winnerLabel.font = UIFont.monospacedSystemFont(ofSize: 18, weight: .medium)
         winnerLabel.numberOfLines = 2
         winnerLabel.lineBreakMode = .byWordWrapping
-        winnerLabel.text = "tap on board to start. if you can..."
         winnerLabel.textColor = .black
         
         for button in buttons {
@@ -87,11 +86,63 @@ class MainView: UIView {
         settingsButton.layer.cornerRadius = 4
         settingsButton.backgroundColor = buttonColor
         
-        settingsButton.setTitle("exit", for: .normal)
-        settingsButton.titleLabel?.font = UIFont.monospacedSystemFont(ofSize: 20, weight: .regular)
-        settingsButton.setTitleColor(.black, for: .normal)
-        settingsButton.layer.cornerRadius = 4
-        settingsButton.backgroundColor = buttonColor
+        exitButton.setTitle("exit", for: .normal)
+        exitButton.titleLabel?.font = UIFont.monospacedSystemFont(ofSize: 20, weight: .regular)
+        exitButton.setTitleColor(.black, for: .normal)
+        exitButton.layer.cornerRadius = 4
+        exitButton.backgroundColor = buttonColor
         
+    }
+    
+    func initialUiState(isGameStarted: Bool?) {
+        guard let isGameStarted = isGameStarted else { return }
+        
+        if isGameStarted {
+            hideElements(
+                hideScoreLabel: false,
+                hideScoreNLabel: false,
+                hideWinStreakLabel: false,
+                hideWinStreakNLabel: false,
+                hideScoreBoardButton: true,
+                hideSettingsButton: true,
+                hideExitButton: false,
+                hideBlurView: true)
+            
+            scoreLabel.text = "score"
+            winnerLabel.text = ""
+        } else {
+            hideElements(
+                hideScoreLabel: false,
+                hideScoreNLabel: true,
+                hideWinStreakLabel: true,
+                hideWinStreakNLabel: true,
+                hideScoreBoardButton: false,
+                hideSettingsButton: false,
+                hideExitButton: true,
+                hideBlurView: false)
+            
+            scoreLabel.text = "hello, User"
+            winnerLabel.text = "tap on board to start. if you can..."
+        }
+    }
+    
+    func hideElements(hideScoreLabel: Bool?, hideScoreNLabel: Bool?, hideWinStreakLabel: Bool?, hideWinStreakNLabel: Bool?, hideScoreBoardButton: Bool?, hideSettingsButton: Bool?, hideExitButton: Bool?, hideBlurView: Bool?) {
+        guard let hideScoreLabel = hideScoreLabel else { return }
+        guard let hideScoreNLabel = hideScoreNLabel else { return }
+        guard let hideWinStreakLabel = hideWinStreakLabel else { return }
+        guard let hideWinStreakNLabel = hideWinStreakNLabel else { return }
+        guard let hideScoreBoardButton = hideScoreBoardButton else { return }
+        guard let hideSettingsButton = hideSettingsButton else { return }
+        guard let hideExitButton = hideExitButton else { return }
+        guard let hideBlurView = hideBlurView else { return }
+        
+        scoreLabel.isHidden = hideScoreLabel
+        scoreNLabel.isHidden = hideScoreNLabel
+        winStreakLabel.isHidden = hideWinStreakLabel
+        winStreakNLabel.isHidden = hideWinStreakNLabel
+        scoreboardButton.isHidden = hideScoreBoardButton
+        settingsButton.isHidden = hideSettingsButton
+        exitButton.isHidden = hideExitButton
+        blurView.isHidden = hideBlurView
     }
 }
