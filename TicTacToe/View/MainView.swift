@@ -8,6 +8,7 @@
 import UIKit
 
 class MainView: UIView {
+    
     //MARK: IBOUTLETS
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var winStreakLabel: UILabel!
@@ -96,7 +97,9 @@ class MainView: UIView {
     
     func initialUiState(isGameStarted: Bool?) {
         guard let isGameStarted = isGameStarted else { return }
-        
+        guard let name = UserDefaults.standard.string(forKey: "name") else { return }
+        guard let planetName = UserDefaults.standard.string(forKey: "planetName") else { return }
+                
         if isGameStarted {
             hideElements(
                 hideScoreLabel: false,
@@ -109,6 +112,7 @@ class MainView: UIView {
                 hideBlurView: true)
             
             scoreLabel.text = "score"
+            winStreakLabel.text = "winstreak"
             winnerLabel.text = ""
         } else {
             hideElements(
@@ -121,7 +125,8 @@ class MainView: UIView {
                 hideExitButton: true,
                 hideBlurView: false)
             
-            scoreLabel.text = "hello, User"
+            scoreLabel.text = "hello, \(name)"
+            winStreakLabel.text = "from: \(planetName)"
             winnerLabel.text = "tap on board to start. if you can..."
         }
     }

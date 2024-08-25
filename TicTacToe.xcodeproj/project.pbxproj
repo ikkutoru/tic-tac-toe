@@ -14,6 +14,13 @@
 		C740A2F02C75D3770008C52D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C740A2EE2C75D3770008C52D /* LaunchScreen.storyboard */; };
 		C740A2FB2C75D5C40008C52D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740A2FA2C75D5C40008C52D /* MainView.swift */; };
 		C740A2FD2C75D5E40008C52D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C740A2FC2C75D5E40008C52D /* MainViewController.swift */; };
+		C749C68D2C773DA800D83EE1 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C749C68C2C773DA800D83EE1 /* WelcomePageViewController.swift */; };
+		C749C68F2C7740CE00D83EE1 /* WelcomePageOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C749C68E2C7740CE00D83EE1 /* WelcomePageOneView.swift */; };
+		C749C6912C7740DD00D83EE1 /* WelcomePageTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C749C6902C7740DD00D83EE1 /* WelcomePageTwoView.swift */; };
+		C749C6932C7740E900D83EE1 /* WelcomePageThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C749C6922C7740E900D83EE1 /* WelcomePageThreeView.swift */; };
+		C749C6962C774A8700D83EE1 /* CustomVerticalPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C749C6952C774A8700D83EE1 /* CustomVerticalPageControl.swift */; };
+		C749C6982C775ADB00D83EE1 /* WelcomePageThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C749C6972C775ADB00D83EE1 /* WelcomePageThreeViewController.swift */; };
+		C749C69A2C775C7100D83EE1 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C749C6992C775C7100D83EE1 /* CustomTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		C740A2F12C75D3770008C52D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C740A2FA2C75D5C40008C52D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C740A2FC2C75D5E40008C52D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C749C68C2C773DA800D83EE1 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
+		C749C68E2C7740CE00D83EE1 /* WelcomePageOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageOneView.swift; sourceTree = "<group>"; };
+		C749C6902C7740DD00D83EE1 /* WelcomePageTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageTwoView.swift; sourceTree = "<group>"; };
+		C749C6922C7740E900D83EE1 /* WelcomePageThreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageThreeView.swift; sourceTree = "<group>"; };
+		C749C6952C774A8700D83EE1 /* CustomVerticalPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVerticalPageControl.swift; sourceTree = "<group>"; };
+		C749C6972C775ADB00D83EE1 /* WelcomePageThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageThreeViewController.swift; sourceTree = "<group>"; };
+		C749C6992C775C7100D83EE1 /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 		C740A2E22C75D3750008C52D /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				C749C6942C774A7300D83EE1 /* CustomView */,
 				C740A2F82C75D4910008C52D /* Model */,
 				C740A2F92C75D4970008C52D /* Controller */,
 				C740A2F72C75D48C0008C52D /* View */,
@@ -75,6 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				C740A2FA2C75D5C40008C52D /* MainView.swift */,
+				C749C68E2C7740CE00D83EE1 /* WelcomePageOneView.swift */,
+				C749C6902C7740DD00D83EE1 /* WelcomePageTwoView.swift */,
+				C749C6922C7740E900D83EE1 /* WelcomePageThreeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -90,8 +108,19 @@
 			isa = PBXGroup;
 			children = (
 				C740A2FC2C75D5E40008C52D /* MainViewController.swift */,
+				C749C68C2C773DA800D83EE1 /* WelcomePageViewController.swift */,
+				C749C6972C775ADB00D83EE1 /* WelcomePageThreeViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		C749C6942C774A7300D83EE1 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				C749C6952C774A8700D83EE1 /* CustomVerticalPageControl.swift */,
+				C749C6992C775C7100D83EE1 /* CustomTransition.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +195,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C740A2FB2C75D5C40008C52D /* MainView.swift in Sources */,
+				C749C6962C774A8700D83EE1 /* CustomVerticalPageControl.swift in Sources */,
+				C749C69A2C775C7100D83EE1 /* CustomTransition.swift in Sources */,
+				C749C6932C7740E900D83EE1 /* WelcomePageThreeView.swift in Sources */,
+				C749C68F2C7740CE00D83EE1 /* WelcomePageOneView.swift in Sources */,
+				C749C6912C7740DD00D83EE1 /* WelcomePageTwoView.swift in Sources */,
+				C749C6982C775ADB00D83EE1 /* WelcomePageThreeViewController.swift in Sources */,
 				C740A2E42C75D3750008C52D /* AppDelegate.swift in Sources */,
 				C740A2E62C75D3750008C52D /* SceneDelegate.swift in Sources */,
 				C740A2FD2C75D5E40008C52D /* MainViewController.swift in Sources */,
+				C749C68D2C773DA800D83EE1 /* WelcomePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
